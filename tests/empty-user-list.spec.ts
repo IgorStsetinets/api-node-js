@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { StatusCodes } from 'http-status-codes';
-
 let baseURL = 'http://localhost:3000/users';
 
 test.describe('User API - Empty User List', () => {

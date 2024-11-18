@@ -49,8 +49,5 @@ test.describe('User management API', () => {
         console.log(responseBody)
         expect.soft(response.status()).toBe(StatusCodes.NOT_FOUND)
 
-
     });
-
-
 });
