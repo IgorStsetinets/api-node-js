@@ -27,12 +27,14 @@ jobs:
       - name: Set up Docker Compose
         uses: hoverkraft-tech/compose-action@v2.0.1
         with:
-            compose-file: ./docker-compose.yaml
-            up-flags: -d
+          compose-file: ./docker-compose.yaml
+          up-flags: -d
 
       - name: Run test for empty array
         run: npx playwright test tests/empty-user-list.spec.ts
 
-      - name: Run other tests
+      - name: Run user-controller tests
         run: npx playwright test tests/user-controller.test.ts
 
+      - name: Run API client cycles tests
+        run: npx playwright test tests/api-client-cycles.test.ts
