@@ -20,6 +20,7 @@ test.describe('User API - Empty User List', () => {
     test('GET / - should return empty when no users', async ({ request }) => {
         const response = await request.get(`${baseURL}`)
         expect(response.status()).toBe(StatusCodes.OK)
+
         const responseBody = await response.text()
         expect(responseBody).toBe('[]')
     })
